@@ -6,4 +6,19 @@
 -- | 2017 | Chicago White Sox |
 -- +------+-------------------+
 
+SELECT year, name
+FROM teams
+WHERE park = "U.S. Cellular Field";
+SELECT * FROM teams;
 
+SELECT COUNT (*)
+FROM teams;
+
+
+SELECT AVG (wins)
+FROM teams;
+
+SELECT year, AVG (wins)
+FROM teams
+GROUP BY year
+ORDER BY AVG (wins);

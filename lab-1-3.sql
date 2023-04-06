@@ -7,5 +7,12 @@
 -- | 1962 | New York Mets.       | 40   | 120    |
 -- | 2003 | Detroit Tigers       | 43   | 119    |
 -- +------+----------------------+------+--------+
+SELECT year, name, losses FROM teams ORDER BY losses;
 
 
+SELECT year,
+name, wins, losses, 100*(losses/(wins+losses))
+AS percent_lost FROM teams ORDER BY losses;
+SELECT year, name, wins, losses 
+FROM teams 
+ORDER by losses DESC LIMIT 3; 
